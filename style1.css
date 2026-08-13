@@ -1,0 +1,281 @@
+/* =========================
+   AUTH / SIGN UP PAGE
+========================= */
+
+.auth-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f8fafc;
+}
+
+
+/* LEFT SIDE */
+
+.auth-visual {
+    position: relative;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #6366f1
+    );
+
+    color: white;
+
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.auth-logo img {
+    width: 42px;
+    height: 42px;
+}
+
+.auth-logo span {
+    color: #c7d2fe;
+}
+
+.visual-content {
+    max-width: 450px;
+    margin: auto;
+}
+
+.visual-content h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.visual-content p {
+    color: #e0e7ff;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+/* RIGHT SIDE */
+
+.auth-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 420px;
+}
+
+.auth-form h2 {
+    font-size: 32px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.auth-subtitle {
+    color: #6b7280;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+
+/* FORM */
+
+.auth-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+
+    margin-bottom: 8px;
+}
+
+.auth-form input {
+    padding: 14px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+
+    transition: 0.2s;
+}
+
+.auth-form input:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+
+/* SIGN UP BUTTON */
+
+.signup-btn {
+    border: none;
+
+    background: #6366f1;
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background: #4f46e5;
+}
+
+
+/* DIVIDER */
+
+.divider {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    background: #e5e7eb;
+    flex: 1;
+}
+
+
+/* GOOGLE */
+
+.google-btn {
+    width: 100%;
+
+    background: white;
+
+    border: 1px solid #d1d5db;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.google-btn:hover {
+    background: #f9fafb;
+}
+
+
+/* LOGIN */
+
+.login-text {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+.login-text a {
+    color: #6366f1;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+/* MOBILE LOGO */
+
+.mobile-logo {
+    display: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .auth-page {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-visual {
+        display: none;
+    }
+
+    .auth-form-container {
+        min-height: 100vh;
+        padding: 30px 20px;
+    }
+
+    .mobile-logo {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        font-size: 22px;
+        font-weight: 700;
+
+        margin-bottom: 45px;
+    }
+
+    .mobile-logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .mobile-logo span {
+        color: #6366f1;
+    }
+
+    .auth-form h2 {
+        font-size: 28px;
+    }
+}
