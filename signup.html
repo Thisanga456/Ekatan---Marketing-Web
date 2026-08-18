@@ -1,119 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started | EkataYan</title>
 
-    <title>Sign Up | EkataYan</title>
+    <link rel="shortcut icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signup.css">
 
-    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="signup-page">
 
-    <div class="auth-page">
+    <header class="signup-navbar">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="EkataYan logo">
+            Ekata<span>Yan</span>
+        </a>
 
-        <!-- Left Side -->
+        <p>Already have an account?
+            <a href="login.html">Log in</a>
+        </p>
+    </header>
 
-        <div class="auth-visual">
+    <main class="signup-main">
+        <section class="signup-card">
 
-            <div class="auth-logo">
-                <img src="logo.png" alt="EkataYan">
-                Ekata<span>Yan</span>
+            <div class="signup-heading">
+                <div class="signup-badge">✦ Start your journey</div>
+                <h1>Let's get you <span>started.</span></h1>
+                <p>Create your EkataYan account and start planning smarter trips together.</p>
             </div>
 
-            <div class="visual-content">
-                <h1>
-                    Your journey
-                    starts here.
-                </h1>
+            <form class="signup-form">
 
-                <p>
-                    Plan trips, discover destinations,
-                    travel together and keep everything
-                    in one place.
-                </p>
-            </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First name</label>
+                        <input type="text" id="first-name" name="first-name"
+                               placeholder="Your first name" autocomplete="given-name" required>
+                    </div>
 
-        </div>
-
-
-        <!-- Right Side -->
-
-        <div class="auth-form-container">
-
-            <div class="auth-form">
-
-                <div class="mobile-logo">
-                    <img src="logo.png" alt="EkataYan">
-                    Ekata<span>Yan</span>
+                    <div class="form-group">
+                        <label for="last-name">Last name</label>
+                        <input type="text" id="last-name" name="last-name"
+                               placeholder="Your last name" autocomplete="family-name" required>
+                    </div>
                 </div>
 
-                <h2>Create your account</h2>
-
-                <p class="auth-subtitle">
-                    Start planning your next adventure with EkataYan.
-                </p>
-
-
-                <form>
-
-                    <label>Full Name</label>
-
-                    <input
-                        type="text"
-                        placeholder="Enter your name"
-                        required
-                    >
-
-
-                    <label>Email Address</label>
-
-                    <input
-                        type="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-
-
-                    <label>Password</label>
-
-                    <input
-                        type="password"
-                        placeholder="Create a password"
-                        required
-                    >
-
-
-                    <button type="submit" class="signup-btn">
-                        Create Account
-                    </button>
-
-                </form>
-
-
-                <div class="divider">
-                    <span>or</span>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="you@example.com" autocomplete="email" required>
                 </div>
 
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password"
+                               placeholder="Create a password" autocomplete="new-password" required>
+                    </div>
 
-                <button class="google-btn">
-                    Continue with Google
-                </button>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm password</label>
+                        <input type="password" id="confirm-password" name="confirm-password"
+                               placeholder="Repeat password" autocomplete="new-password" required>
+                    </div>
+                </div>
 
+                <label class="terms">
+                    <input type="checkbox" required>
+                    <span>I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.</span>
+                </label>
 
-                <p class="login-text">
-                    Already have an account?
-                    <a href="login.html">Sign in</a>
-                </p>
+                <button type="submit" class="signup-btn">Create Account <span>→</span></button>
 
-            </div>
+            </form>
 
-        </div>
+            <p class="mobile-login">
+                Already have an account? <a href="login.html">Log in</a>
+            </p>
 
-    </div>
+        </section>
+    </main>
 
 </body>
-
 </html>
