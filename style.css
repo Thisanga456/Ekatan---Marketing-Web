@@ -15,7 +15,13 @@ html {
 body {
     font-family: "Inter", sans-serif;
     color: #111827;
-    background: linear-gradient(180deg, #dbeafe, #6fb2ff, #124dad);
+    background: linear-gradient(180deg, #81c1f9, #3c6cbb);
+}
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    margin: 50px 0;
 }
 
 
@@ -29,7 +35,7 @@ body {
     background: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid #eeeeee;
     /* background: linear-gradient(d7e8fe,); */
-    background: #dbeafe;
+    background: #111827;
 
 }
 
@@ -52,7 +58,7 @@ body {
     text-decoration: none;
     font-size: 25px;
     font-weight: 800;
-    color: #111827;
+    color: #ffffff;
     display: flex;
     align-items: center;
     line-height: 1;
@@ -77,11 +83,13 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #555;
-    font-size: 14px;
+    color: #ffffff;
+    font-size: 18px;
     font-weight: 500;
-
     transition: 0.2s;
+
+
+    /* -webkit-text-stroke: 0.4px #ffffff; */
 }
 
 .nav-links a:hover {
@@ -97,20 +105,10 @@ body {
     gap: 15px;
 }
 
-.login-btn {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    font-weight: 500;
-}
-.login-btn:hover{
-    color: #126527;
-}
-
-.start-btn {
+.getapp-btn {
     text-decoration: none;
     color: white;
-    background: #111827;
+    background: #126527;
 
     padding: 11px 20px;
     border-radius: 8px;
@@ -121,7 +119,7 @@ body {
     transition: 0.2s;
 }
 
-.start-btn:hover {
+.getapp-btn:hover {
     transform: translateY(-2px);
 }
 
@@ -186,7 +184,7 @@ body {
 .hero p {
     max-width: 520px;
 
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.7;
 
     color: #201e1e;
@@ -244,9 +242,12 @@ body {
 
     margin-top: 30px;
 
-    color: #8a8a8a;
+    color: #070707;
 
     font-size: 12px;
+}
+.hero-trust span{
+    font-size: 18px;
 }
 
 
@@ -268,7 +269,7 @@ body {
 
 /* BACKGROUND GLOW */
 
-.glow {
+/* .glow {
     position: absolute;
 
     width: 360px;
@@ -279,7 +280,7 @@ body {
     border-radius: 50%;
 
     filter: blur(20px);
-}
+} */
 
 
 /* PHONE */
@@ -512,7 +513,7 @@ body {
         display: none;
     }
 
-    .start-btn {
+    .getapp-btn {
         padding: 9px 14px;
     }
 
@@ -1169,7 +1170,7 @@ body {
     height: 400px;
     border-radius: 30px;
     padding: 45px;
-    background: linear-gradient(145deg, rgb(57, 219, 219), #73aaff);
+    background: linear-gradient(145deg, #81c1f9, #2398eb);
     color: white;
     display: flex;
     flex-direction: column;
@@ -1180,6 +1181,9 @@ body {
 .about-card span {
     font-size: 55px;
     margin-bottom: auto;
+}
+.about-card img {
+    width: 120px;
 }
 
 .about-card h3 {
