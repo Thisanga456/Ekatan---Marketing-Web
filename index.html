@@ -3,298 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="EkataYan is an AI-powered travel platform for smarter trip planning, group travel and shared expenses.">
+    <meta name="description" content="EkataYan is an AI-powered Sri Lankan travel platform for smarter trip planning, group travel and shared expenses.">
     <meta name="theme-color" content="#0f172a">
-
-    <title>EkataYan | Travel Smarter</title>
+    <title>EkataYan | Explore Sri Lanka smarter</title>
 
     <link rel="icon" type="image/png" href="pics/logo3.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_dynamic.css">
 </head>
-
 <body>
+    <div class="page-progress" aria-hidden="true"><span id="pageProgress"></span></div>
 
     <!-- NAVIGATION -->
-    <header class="navbar">
+    <header class="navbar" id="top">
         <div class="nav-container">
-            <a href="#" class="logo" aria-label="EkataYan home">
+            <a href="#top" class="logo" aria-label="EkataYan home">
                 <img src="pics/logo3.png" alt="" width="44" height="44">
                 Ekata<span>Yan</span>
             </a>
 
-            <nav class="nav-links" aria-label="Main navigation">
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav-links" id="mainNav" aria-label="Main navigation">
                 <a href="#features">Features</a>
                 <a href="#how-it-works">How It Works</a>
                 <a href="#about">About</a>
             </nav>
 
-            <a href="#features" class="getapp-btn">Get App <span aria-hidden="true">→</span></a>
+            <button class="getapp-btn" id="getAppBtn" type="button">Get App <span aria-hidden="true">→</span></button>
         </div>
     </header>
 
     <main>
-
         <!-- HERO -->
-        <section class="hero">
+        <section class="hero reveal-section">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <span aria-hidden="true">✦</span>
-                    AI-powered travel planning
+                    <span class="live-dot" aria-hidden="true"></span>
+                    Built for exploring Sri Lanka
                 </div>
 
                 <h1>
-                    Your next adventure,
+                    Discover <span id="rotatingPlace">Sri Lanka</span>,<br>
                     <span>planned smarter.</span>
                 </h1>
 
                 <p>
-                    Plan trips, discover amazing places, manage group travel
-                    and track expenses — all in one place with EkataYan.
+                    Build personalized island itineraries, discover unforgettable places,
+                    coordinate group trips and split costs in Sri Lankan Rupees — all with EkataYan.
                 </p>
 
-                <div class="hero-buttons">
-                    <a href="#features" class="primary-btn">Explore Features <span aria-hidden="true">→</span></a>
-                    <a href="#how-it-works" class="secondary-btn">See how it works</a>
-                </div>
+                <form class="trip-finder" id="tripFinder">
+                    <div class="finder-field">
+                        <label for="destination">Where to?</label>
+                        <select id="destination" name="destination">
+                            <option value="Ella">Ella</option>
+                            <option value="Kandy">Kandy</option>
+                            <option value="Sigiriya">Sigiriya</option>
+                            <option value="Mirissa">Mirissa</option>
+                            <option value="Nuwara Eliya">Nuwara Eliya</option>
+                            <option value="Arugam Bay">Arugam Bay</option>
+                            <option value="Jaffna">Jaffna</option>
+                        </select>
+                    </div>
+                    <div class="finder-field">
+                        <label for="tripDays">Trip length</label>
+                        <select id="tripDays" name="tripDays">
+                            <option value="2">2 days</option>
+                            <option value="3" selected>3 days</option>
+                            <option value="5">5 days</option>
+                            <option value="7">7 days</option>
+                        </select>
+                    </div>
+                    <button class="finder-btn" type="submit">Plan my trip <span>→</span></button>
+                </form>
 
                 <div class="hero-trust" aria-label="EkataYan benefits">
                     <span>✦ AI-powered</span>
+                    <span>✦ Sri Lanka focused</span>
                     <span>✦ Group-friendly</span>
-                    <span>✦ All-in-one</span>
+                    <span>✦ LKR expenses</span>
                 </div>
             </div>
 
             <div class="hero-visual">
                 <div class="visual-glow" aria-hidden="true"></div>
+                <div class="hero-island-tag tag-one">Ella <small>Hill country</small></div>
+                <div class="hero-island-tag tag-two">Mirissa <small>South coast</small></div>
                 <img src="pics/iPhone 17.png" alt="EkataYan mobile app preview" width="430">
+                <div class="trip-pulse-card">
+                    <span class="trip-pulse-icon">✦</span>
+                    <div><strong>Smart route ready</strong><small>Colombo → Kandy → Ella</small></div>
+                </div>
             </div>
         </section>
 
         <div class="section-divider" aria-hidden="true"></div>
 
         <!-- FEATURES -->
-        <section class="features-section" id="features">
+        <section class="features-section reveal-section" id="features">
             <div class="section-heading">
                 <div class="section-badge">Everything in one place</div>
-                <h2>Travel planning, <span>made effortless.</span></h2>
+                <h2>Your Sri Lanka trip, <span>without the chaos.</span></h2>
                 <p>
-                    From creating your itinerary to splitting expenses,
-                    EkataYan brings everything you need for your trip together.
+                    From finding your next stop to splitting a tuk-tuk fare,
+                    EkataYan keeps every part of the journey together.
                 </p>
             </div>
 
             <div class="features-grid">
-
-                <article class="feature-card">
-                    <div class="feature-icon">
-                        <img src="pics/ai.png" alt="" width="35" height="35">
-                    </div>
+                <article class="feature-card interactive-card" tabindex="0">
+                    <div class="feature-icon"><img src="pics/ai.png" alt="" width="35" height="35"></div>
                     <h3>AI-Powered Planning</h3>
-                    <p>
-                        Tell EkataYan where you want to go and let AI
-                        create a personalized itinerary for your trip.
-                    </p>
+                    <p>Choose your interests, budget and travel pace. EkataYan builds a practical Sri Lankan itinerary around you.</p>
 
                     <div class="feature-preview ai-preview" aria-hidden="true">
-                        <div class="ai-message">
-                            <span>✦</span>
-                            Creating your perfect itinerary...
+                        <div class="ai-topbar"><span class="preview-label"><span class="sparkle">✦</span> AI itinerary</span><span class="ai-status"><i></i> Ready</span></div>
+                        <div class="ai-trip-head"><div><strong>7 days around Sri Lanka</strong><small>Balanced for culture + nature</small></div><span class="ai-avatar">AI</span></div>
+                        <div class="ai-itinerary">
+                            <div class="ai-day"><span class="day-dot">01</span><div><strong>Colombo</strong><small>Food &amp; city</small></div><b>›</b></div>
+                            <div class="ai-day active"><span class="day-dot">02</span><div><strong>Kandy</strong><small>Culture &amp; hills</small></div><b>›</b></div>
+                            <div class="ai-day"><span class="day-dot">03</span><div><strong>Ella</strong><small>Views &amp; trails</small></div><b>›</b></div>
                         </div>
-                        <div class="ai-line"></div>
-                        <div class="ai-line short"></div>
-                        <div class="ai-line"></div>
                     </div>
                 </article>
 
-                <article class="feature-card">
-                    <div class="feature-icon">
-                        <img src="pics/group.png" alt="" width="40" height="40">
-                    </div>
+                <article class="feature-card interactive-card" tabindex="0">
+                    <div class="feature-icon"><img src="pics/group.png" alt="" width="40" height="40"></div>
                     <h3>Group Trips</h3>
-                    <p>
-                        Invite your friends, plan together and keep
-                        everyone connected throughout the journey.
-                    </p>
+                    <p>Invite your travel crew, vote on places and keep everyone updated from the first idea to the final stop.</p>
 
-                    <div class="people-preview" aria-hidden="true">
-                        <div class="person">T</div>
-                        <div class="person">S</div>
-                        <div class="person">A</div>
-                        <div class="person">+</div>
+                    <div class="feature-preview group-preview" aria-hidden="true">
+                        <div class="group-orbit orbit-one"></div><div class="group-orbit orbit-two"></div>
+                        <div class="group-trip-card">
+                            <div class="group-card-head"><div><span>WEEKEND ESCAPE</span><strong>Ella with the crew</strong></div><div class="group-more">•••</div></div>
+                            <div class="group-members"><div class="group-person p1">T</div><div class="group-person p2">S</div><div class="group-person p3">A</div><div class="group-person p4">+</div><span>4 members</span></div>
+                            <div class="group-progress"><div><span></span></div><small>Trip decisions <b>78%</b></small></div>
+                        </div>
+                        <div class="group-bubble bubble-one">✓ Nine Arch added</div><div class="group-bubble bubble-two">✦ 3 votes for hike</div>
                     </div>
                 </article>
 
-                <article class="feature-card">
-                    <div class="feature-icon">
-                        <img src="pics/expense.png" alt="" width="30" height="30">
-                    </div>
+                <article class="feature-card interactive-card" tabindex="0">
+                    <div class="feature-icon"><img src="pics/expense.png" alt="" width="30" height="30"></div>
                     <h3>Shared Expenses</h3>
-                    <p>
-                        Keep track of group expenses and see who paid
-                        for what without the confusion.
-                    </p>
+                    <p>Track hotels, food, train tickets and rides in LKR, then instantly see who owes whom.</p>
 
-                    <div class="expense-preview" aria-hidden="true">
-                        <div class="expense-row"><span>Hotel</span><strong>$120</strong></div>
-                        <div class="expense-row"><span>Food</span><strong>$45</strong></div>
-                        <div class="expense-row"><span>Transport</span><strong>$30</strong></div>
+                    <div class="feature-preview expense-preview" aria-hidden="true">
+                        <div class="expense-summary"><div><span>Total group spending</span><strong>Rs. 48,650</strong></div><div class="expense-trend">LKR</div></div>
+                        <div class="expense-chart"><div class="bar bar-one"><span>Stay</span></div><div class="bar bar-two"><span>Food</span></div><div class="bar bar-three"><span>Travel</span></div><div class="bar bar-four"><span>Fun</span></div></div>
+                        <div class="expense-bottom"><div><i class="expense-dot hotel"></i>Stay <b>24k</b></div><div><i class="expense-dot food"></i>Food <b>9.8k</b></div><div><i class="expense-dot travel"></i>Travel <b>8.4k</b></div></div>
                     </div>
                 </article>
 
-                <article class="feature-card">
-                    <div class="feature-icon">
-                        <img src="pics/map.png" alt="" width="22" height="22">
-                    </div>
+                <article class="feature-card interactive-card" tabindex="0">
+                    <div class="feature-icon"><img src="pics/map.png" alt="" width="22" height="22"></div>
                     <h3>Everything Together</h3>
-                    <p>
-                        Your itinerary, destinations, activities and
-                        important trip information — all in one place.
-                    </p>
+                    <p>Itinerary, route, places, activities and group information stay together in one simple trip dashboard.</p>
 
                     <div class="map-preview" aria-hidden="true">
-                        <div class="map-grid"></div>
-
-                        <svg class="travel-route" viewBox="0 0 520 160" preserveAspectRatio="none">
-                            <path d="M 65 115 C 135 55, 180 75, 250 75 C 325 75, 370 35, 455 105"></path>
-                        </svg>
-
-                        <div class="destination destination-colombo">
-                            <div class="pin"><span></span></div>
-                            <div class="destination-label">
-                                <strong>Colombo</strong>
-                                <small>Start</small>
-                            </div>
-                        </div>
-
-                        <div class="destination destination-kandy">
-                            <div class="pin"><span></span></div>
-                            <div class="destination-label">
-                                <strong>Kandy</strong>
-                                <small>Explore</small>
-                            </div>
-                        </div>
-
-                        <div class="destination destination-ella">
-                            <div class="pin"><span></span></div>
-                            <div class="destination-label">
-                                <strong>Ella</strong>
-                                <small>Destination</small>
-                            </div>
-                        </div>
+                        <div class="map-glow"></div><div class="map-grid"></div>
+                        <svg class="travel-route" viewBox="0 0 520 160" preserveAspectRatio="none"><path d="M 65 115 C 135 55, 180 75, 250 75 C 325 75, 370 35, 455 105"></path></svg>
+                        <div class="destination destination-colombo"><div class="pin"><span></span></div><div class="destination-label"><strong>Colombo</strong><small>Start</small></div></div>
+                        <div class="destination destination-kandy"><div class="pin"><span></span></div><div class="destination-label"><strong>Kandy</strong><small>Culture</small></div></div>
+                        <div class="destination destination-ella"><div class="pin"><span></span></div><div class="destination-label"><strong>Ella</strong><small>Explore</small></div></div>
                     </div>
                 </article>
-
             </div>
         </section>
 
         <div class="section-divider" aria-hidden="true"></div>
 
         <!-- HOW IT WORKS -->
-        <section class="how-it-works" id="how-it-works">
+        <section class="how-it-works reveal-section" id="how-it-works">
             <div class="section-header">
                 <p class="section-label">HOW IT WORKS</p>
-                <h2>Travel planning made <span>simple.</span></h2>
-                <p>From your first idea to the final destination, EkataYan keeps everything together.</p>
+                <h2>From “where should we go?” to <span>ready to travel.</span></h2>
+                <p>Start with a destination or let EkataYan shape the route around the kind of Sri Lanka experience you want.</p>
             </div>
 
             <div class="steps">
                 <article class="step">
                     <div class="step-number">01</div>
-                    <h3>Create Your Trip</h3>
-                    <p>Choose your destination, dates and travel preferences, then invite your friends to join.</p>
+                    <div class="step-mini-icon">⌖</div>
+                    <h3>Pick Your Vibe</h3>
+                    <p>Beach, mountains, wildlife, culture or a little of everything — choose dates, budget and who is coming.</p>
                 </article>
-
                 <article class="step">
                     <div class="step-number">02</div>
-                    <h3>Plan With AI</h3>
-                    <p>Let EkataYan create a personalized itinerary based on your group's interests and budget.</p>
+                    <div class="step-mini-icon">✦</div>
+                    <h3>Build With AI</h3>
+                    <p>Get a smart route with suggested stops and activities, then adjust it until it feels exactly right.</p>
                 </article>
-
                 <article class="step">
                     <div class="step-number">03</div>
+                    <div class="step-mini-icon">↗</div>
                     <h3>Travel Together</h3>
-                    <p>Manage your itinerary, expenses and activities together while enjoying your journey.</p>
+                    <p>Use one shared plan on the road, keep costs organized and make decisions together as the trip changes.</p>
                 </article>
+            </div>
+
+            <div class="journey-strip" aria-label="Popular Sri Lanka travel ideas">
+                <button class="journey-chip active" data-place="Ella" data-days="3">Ella · 3 days</button>
+                <button class="journey-chip" data-place="Sigiriya" data-days="2">Sigiriya · 2 days</button>
+                <button class="journey-chip" data-place="Mirissa" data-days="3">Mirissa · 3 days</button>
+                <button class="journey-chip" data-place="Jaffna" data-days="3">Jaffna · 3 days</button>
             </div>
         </section>
 
         <!-- ABOUT -->
-        <section class="about" id="about">
+        <section class="about reveal-section" id="about">
             <div class="about-container">
                 <div class="about-image">
                     <div class="about-card">
                         <span><img src="pics/logo3.png" alt="" width="120"></span>
-                        <h3>One trip.<br>Everything together.</h3>
+                        <div class="about-island-orbit" aria-hidden="true"></div>
+                        <h3>One island.<br>Endless journeys.</h3>
                         <p>Plan • Share • Explore • Enjoy</p>
+                        <div class="about-stat-row">
+                            <div><strong class="counter" data-target="25">0</strong><small>Trip ideas</small></div>
+                            <div><strong class="counter" data-target="9">0</strong><small>Provinces</small></div>
+                            <div><strong>1</strong><small>Shared plan</small></div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="about-content">
                     <p class="section-label">ABOUT EKATAYAN</p>
-                    <h2>Making group travel easier, together.</h2>
-
-                    <p>
-                        EkataYan is an AI-powered travel platform designed to make
-                        planning and managing group trips simple and enjoyable.
-                    </p>
-
-                    <p>
-                        From creating personalized itineraries to managing shared
-                        expenses, EkataYan brings everything travelers need into one place.
-                    </p>
-
-                    <a href="#features" class="about-btn">Discover EkataYan <span aria-hidden="true">→</span></a>
+                    <h2>Travel Sri Lanka with less planning stress.</h2>
+                    <p>EkataYan is an AI-powered travel platform designed around the way friends and groups explore Sri Lanka.</p>
+                    <p>From a hill-country train journey to a south-coast weekend, your route, decisions, shared expenses and trip details stay connected in one place.</p>
+                    <button class="about-btn" id="discoverBtn" type="button">Build a sample trip <span aria-hidden="true">→</span></button>
                 </div>
             </div>
         </section>
-
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <a href="#" class="footer-logo" aria-label="EkataYan home">
-                    <img src="pics/logo3.png" alt="" width="42" height="42">
-                    Ekata<span>Yan</span>
-                </a>
-                <p>Plan smarter, travel together, and make every journey memorable.</p>
+                <a href="#top" class="footer-logo" aria-label="EkataYan home"><img src="pics/logo3.png" alt="" width="42" height="42">Ekata<span>Yan</span></a>
+                <p>Smarter Sri Lanka trips, shared with the people who make them memorable.</p>
+                <div class="footer-status"><span></span> Made for Sri Lankan journeys</div>
             </div>
-
-            <div class="footer-column">
-                <h3>Explore</h3>
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#about">About Us</a>
-            </div>
-
-            <div class="footer-column">
-                <h3>Product</h3>
-                <a href="#features">AI Planning</a>
-                <a href="#features">Group Trips</a>
-                <a href="#features">Shared Expenses</a>
-            </div>
-
-            <div class="footer-column">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook">Facebook</a>
-                    <a href="#" aria-label="Instagram">Instagram</a>
-                    <a href="#" aria-label="TikTok">TikTok</a>
-                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                </div>
-            </div>
+            <div class="footer-column"><h3>Explore</h3><a href="#features">Features</a><a href="#how-it-works">How It Works</a><a href="#about">About Us</a></div>
+            <div class="footer-column"><h3>Product</h3><a href="#features">AI Planning</a><a href="#features">Group Trips</a><a href="#features">Shared Expenses</a></div>
+            <div class="footer-column"><h3>Follow Us</h3><div class="social-links"><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Facebook</a><a href="#">LinkedIn</a></div></div>
         </div>
-
-        <div class="footer-bottom">
-            <p>© 2026 EkataYan. All rights reserved.</p>
-            <p>Made with <span aria-label="love">♥</span> for better journeys.</p>
-        </div>
+        <div class="footer-bottom"><p>© <span id="year">2026</span> EkataYan. All rights reserved.</p><p>Made for better journeys around Sri Lanka.</p></div>
     </footer>
 
+    <!-- INTERACTIVE TRIP MODAL -->
+    <div class="modal-backdrop" id="tripModal" hidden>
+        <div class="trip-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+            <div class="modal-kicker">EKATAYAN SMART PLAN</div>
+            <h2 id="modalTitle">Your sample trip is ready</h2>
+            <p id="modalSummary">A simple itinerary based on your selection.</p>
+            <div class="modal-route" id="modalRoute"></div>
+            <div class="modal-meta">
+                <span><small>Estimated group budget</small><strong id="modalBudget">Rs. 35,000+</strong></span>
+                <span><small>Best for</small><strong id="modalStyle">Friends & groups</strong></span>
+            </div>
+            <button class="modal-primary" id="modalAction" type="button">Looks good <span>✓</span></button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">EkataYan app experience coming soon.</div>
+
+    <script src="EkataYan-JavaScript.js"></script>
 </body>
 </html>
