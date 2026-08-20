@@ -393,6 +393,8 @@ hr {
     overflow: hidden;
     box-shadow: 0 30px 70px rgba(15, 23, 42, 0.18);
     background: #eaf4f8;
+    transform: translateX(100px);
+
 }
 
 .travel-slide {
