@@ -1,0 +1,34 @@
+Git Bash Codes
+
+pwd - Find the folder location
+
+git init - locate the folder in git repossitory
+
+git status - to check the status
+
+git branch -m master main - rename Master branch to Main 
+ 
+git add 'file name' - to add file by file
+git add . - to add all files at once
+
+git commit -m "messege" - commints and types a messege
+ 
+git checkout -b "name" - create a new branch and go to it
+
+git switch branch-name - switch to an existing branch
+
+git branch - to check branch
+
+git remote add origin github.com/thisanga484/My-Python-Fundamentals.git - 
+
+git push  
+
+
+
+
+feature/feature-1
+bug-fix/fix-1
+hot-fix/fix-2
+
+
+
