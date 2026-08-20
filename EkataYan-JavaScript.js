@@ -51,17 +51,17 @@ const sectionObserver = new IntersectionObserver(entries => {
 sections.forEach(section => section && sectionObserver.observe(section));
 
 // Rotating Sri Lanka destination headline
-const rotatingPlace = $('#rotatingPlace');
-const places = ['Sri Lanka', 'Ella', 'Kandy', 'Sigiriya', 'Mirissa', 'Jaffna'];
-let placeIndex = 0;
-setInterval(() => {
-  if (!rotatingPlace || document.hidden) return;
-  rotatingPlace.animate([{ opacity: 1, transform: 'translateY(0)' }, { opacity: 0, transform: 'translateY(-8px)' }], { duration: 220, fill: 'forwards' }).finished.then(() => {
-    placeIndex = (placeIndex + 1) % places.length;
-    rotatingPlace.textContent = places[placeIndex];
-    rotatingPlace.animate([{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 260, fill: 'forwards' });
-  });
-}, 2800);
+// const rotatingPlace = $('#rotatingPlace');
+// const places = ['Sigiriya', 'Mirissa','Kandy','Jaffna','Galle','Trincomalee'];
+// let placeIndex = 0;
+// setInterval(() => {
+//   if (!rotatingPlace || document.hidden) return;
+//   rotatingPlace.animate([{ opacity: 1, transform: 'translateY(0)' }, { opacity: 0, transform: 'translateY(-8px)' }], { duration: 220, fill: 'forwards' }).finished.then(() => {
+//     placeIndex = (placeIndex + 1) % places.length;
+//     rotatingPlace.textContent = places[placeIndex];
+//     rotatingPlace.animate([{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 260, fill: 'forwards' });
+//   });
+// }, 10000);
 
 // Sample trip generator
 const tripData = {
@@ -143,3 +143,58 @@ $('#getAppBtn')?.addEventListener('click', () => showToast('EkataYan mobile app 
 
 // Small finishing touches
 $('#year').textContent = new Date().getFullYear();
+
+// const slides = document.querySelectorAll(".travel-slide");
+
+// let currentSlide = 0;
+
+// setInterval(() => {
+
+//     slides[currentSlide].classList.remove("active");
+
+//     currentSlide++;
+
+//     if (currentSlide >= slides.length) {
+//         currentSlide = 0;
+//     }
+
+//     slides[currentSlide].classList.add("active");
+
+// }, 5000);
+
+const places = [
+    "Ella",
+    "Sigiriya",
+    "Mirissa",
+    "Kandy",
+    "Jaffna",
+    "Galle",
+    "Trincomalee"
+];
+
+const slides = document.querySelectorAll(".travel-slide");
+const rotatingPlace = document.getElementById("rotatingPlace");
+
+let currentSlide = 0;
+
+setInterval(() => {
+
+    // Fade out the current text
+    rotatingPlace.classList.add("hide");
+
+    // Remove current image
+    slides[currentSlide].classList.remove("active");
+
+    // Move to next destination
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    // Show new image
+    slides[currentSlide].classList.add("active");
+
+    // Change text after fade-out
+    setTimeout(() => {
+        rotatingPlace.textContent = places[currentSlide];
+        rotatingPlace.classList.remove("hide");
+    }, 500);
+
+}, 10000);
