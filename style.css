@@ -44,7 +44,7 @@ body {
     margin: 0;
     font-family: "Inter", sans-serif;
     color: var(--ink);
-    background: linear-gradient(145deg, #81c1f9 0%, #2398eb 100%);
+    background: white;
     line-height: 1.5;
     overflow-x: hidden;
 }
@@ -305,12 +305,39 @@ a {
 
 /* APP VISUAL */
 
-.hero-visual {
+.travel-slider {
     position: relative;
-    min-height: 560px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 430px;
+    height: 520px;
+    border-radius: 32px;
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 70px rgba(15, 23, 42, 0.18);
+
+    background: #eaf4f8;
+}
+
+.travel-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+    transform: scale(1.08);
+
+    transition:
+        opacity 1.2s ease,
+        transform 6s ease;
+}
+
+.travel-slide.active {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .visual-glow {
