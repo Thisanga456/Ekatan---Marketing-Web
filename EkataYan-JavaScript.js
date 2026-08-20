@@ -197,4 +197,4 @@ setInterval(() => {
         rotatingPlace.classList.remove("hide");
     }, 500);
 
-}, 10000);
+}, 7500);

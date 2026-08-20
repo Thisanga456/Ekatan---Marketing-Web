@@ -220,7 +220,7 @@ hr {
 
 /* HERO */
 
-.hero {
+/* .hero {
     width: min(var(--container), calc(100% - 48px));
     min-height: calc(100vh - 76px);
     margin: 0 auto;
@@ -229,6 +229,18 @@ hr {
     grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
     align-items: center;
     gap: 64px;
+} */
+ .hero {
+    width: min(var(--container), calc(100% - 48px));
+    min-height: calc(100vh - 76px);
+    margin: 0 auto;
+    padding: 76px 0 92px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
 }
 
 .hero-content {
@@ -358,7 +370,7 @@ hr {
 
 /* APP VISUAL */
 
-.travel-slider {
+/* .travel-slider {
     position: relative;
     width: 430px;
     height: 520px;
@@ -368,6 +380,18 @@ hr {
     box-shadow:
         0 30px 70px rgba(15, 23, 42, 0.18);
 
+    background: #eaf4f8;
+} */
+ .travel-slider {
+    position: relative;
+    width: 430px;
+    height: 520px;
+
+    justify-self: auto;
+
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(15, 23, 42, 0.18);
     background: #eaf4f8;
 }
 
@@ -387,7 +411,7 @@ hr {
     /* Smooth crossfade + slow cinematic zoom */
     transition:
         opacity 1.5s ease-in-out,
-        transform 10s ease-out;
+        transform 7.5s ease-out;
 }
 
 .travel-slide.active {
@@ -873,6 +897,8 @@ hr {
         text-align: center;
         gap: 30px;
         padding-top: 60px;
+
+        transform: translateX(15px);
     }
 
     .hero-content {
